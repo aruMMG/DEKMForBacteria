@@ -30,5 +30,3 @@ def accuracy(truth, predict):
     _, col_idx = linear_sum_assignment(confusion_m, maximize=True)
     acc = np.trace(confusion_m[:, col_idx]) / confusion_m.sum()
     return acc
-
-

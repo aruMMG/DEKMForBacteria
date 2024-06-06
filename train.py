@@ -16,9 +16,9 @@ from utils import (load_data,
 def get_arg():
     arg = argparse.ArgumentParser()
     arg.add_argument('-bs', default=128, type=int, help='batch size')
-    arg.add_argument('-pre_epoch', type=int, help='epochs for train Autoencoder')
-    arg.add_argument('-epoch', type=int, help='epochs for train DEKM')
-    arg.add_argument('-k', type=int, help='num of clusters')
+    arg.add_argument('-pre_epoch', default=15, type=int, help='epochs for train Autoencoder')
+    arg.add_argument('-epoch', default=10, type=int, help='epochs for train DEKM')
+    arg.add_argument('-k', default=10, type=int, help='num of clusters')
     arg.add_argument('-take', type=float, default=1., help='the size of data will be used in training')
     arg.add_argument('-save_dir', default='weight', help='location where model will be saved')
     arg.add_argument('-seed', type=int, default=None, help='torch random seed')
